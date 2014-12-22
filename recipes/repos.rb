@@ -9,7 +9,7 @@ if node[:logstash][:repos][:logstash]
   end
 end
 
-if default[:logstash][:repos][:logstash_forwarder]
+if node[:logstash][:repos][:logstash_forwarder]
   apt_repository 'logstash-forwarder' do
     uri          'http://packages.elasticsearch.org/logstashforwarder/debian'
     components   ['stable', 'main']
