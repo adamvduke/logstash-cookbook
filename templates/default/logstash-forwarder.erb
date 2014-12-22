@@ -1,0 +1,8 @@
+{
+  "network": {
+    "servers": [ "<%= %Q|#{node[:logstash_forwarder][:config][:host]}:#{node[:logstash_forwarder][:config][:port]}| %>" ],
+    "timeout": <%= node[:logstash_forwarder][:config][:timeout] %>,
+    "ssl ca": "<%= node[:logstash_forwarder][:config][:ssl_ca] %>"
+  },
+  "files": <%= JSON.pretty_generate(node[:logstash_forwarder][:config][:files]) %>
+}
