@@ -12,7 +12,7 @@ end
 runit_service 'logstash-forwarder' do
   run_template_name 'logstash-forwarder'
   log_template_name 'logstash-forwarder'
-  cookbook          'zp_elk'
+  cookbook          'logstash'
   options(
     :user          => node[:logstash_forwarder][:runit][:user],
     :group         => node[:logstash_forwarder][:runit][:group],
